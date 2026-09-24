@@ -171,50 +171,225 @@ export default function App() {
           </a>
         </nav>
 
-        <div id="top" className="relative mx-auto grid max-w-7xl items-center gap-8 px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20 lg:grid-cols-[1.1fr_.9fr] lg:px-12 lg:pb-28 lg:pt-24">
-          <div className="hero-content relative z-10 max-w-2xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#9be5c4]">
+        <div id="top" className="relative mx-auto grid max-w-7xl items-start gap-10 px-5 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 lg:grid-cols-[1fr_1.15fr] lg:gap-12 lg:px-12 lg:pb-24 lg:pt-16">
+          <div className="hero-content relative z-10 max-w-xl">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#5b9a8b]/35 bg-[#163c4e]/70 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#a9ebc9]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#59c99c] animate-pulse" />
               The UPI charge guide + QR studio
-            </p>
-            <h1 className="mt-5 text-[clamp(72px,10vw,140px)] font-extrabold leading-[0.89] tracking-[-0.09em] text-white">
+            </div>
+            <h1 className="mt-5 text-[clamp(60px,8vw,112px)] font-extrabold leading-[0.92] tracking-[-0.08em] text-white">
               Split<span className="text-[#a9ebc9]">QR</span><span className="text-[#68c6a2]">.</span>
             </h1>
-            <h2 className="mt-8 text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl">
+            <h2 className="mt-6 text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl">
               UPI charges, minus the guesswork.
             </h2>
-            <p className="mt-4 max-w-xl text-[15px] leading-7 text-[#bbd0d1]">
+            <p className="mt-4 max-w-lg text-[15px] leading-7 text-[#bbd0d1]">
               Check the merchant-side MDR for the real payment category, then make
               payment QRs when you genuinely need separate payers, instalments,
               or a bank transfer limit.
             </p>
-            <a
-              href="#calculator"
-              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-[#b0edcf] px-5 py-3.5 text-sm font-bold text-[#0b3039] transition-all hover:-translate-y-0.5 hover:bg-white"
-            >
-              Check a payment <ArrowDownRight size={18} />
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <a
+                href="#collect"
+                className="inline-flex items-center gap-2.5 rounded-xl bg-[#b0edcf] px-5 py-3 text-sm font-bold text-[#0b3039] transition-all hover:-translate-y-0.5 hover:bg-white shadow-[0_4px_20px_rgba(176,237,207,0.22)]"
+              >
+                Create a QR <ArrowRight size={16} />
+              </a>
+              <a
+                href="#guide"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:border-white/30"
+              >
+                Rate card <ArrowDownRight size={16} />
+              </a>
+            </div>
+
+            <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/10 pt-6 text-xs text-[#9bb3b5]">
+              <div>
+                <div className="font-semibold text-white">100% Client-Side</div>
+                <div className="mt-0.5 text-[#829e9f]">Zero server tracking or logs</div>
+              </div>
+              <div>
+                <div className="font-semibold text-white">Oct 15, 2026 MDR</div>
+                <div className="mt-0.5 text-[#829e9f]">Official NPCI &amp; PIB rates</div>
+              </div>
+            </div>
           </div>
 
-          <div className="hero-art pointer-events-none relative hidden h-[420px] lg:block" aria-hidden="true">
-            <svg viewBox="0 0 540 540" fill="none" className="absolute inset-0 h-full w-full">
-              <circle cx="280" cy="270" r="218" stroke="#5b9a8b" strokeOpacity=".28" />
-              <circle cx="280" cy="270" r="169" stroke="#5b9a8b" strokeOpacity=".38" />
-              <circle cx="280" cy="270" r="118" stroke="#5b9a8b" strokeOpacity=".5" />
-              <path d="M48 270H512M280 38V502" stroke="#5b9a8b" strokeOpacity=".19" />
-              <path d="M90 398C177 301 262 315 332 222C371 169 422 151 486 139" stroke="#a9ebc9" strokeWidth="3" strokeLinecap="round" />
-              <circle cx="90" cy="398" r="8" fill="#a9ebc9" />
-              <circle cx="332" cy="222" r="8" fill="#a9ebc9" />
-              <circle cx="486" cy="139" r="8" fill="#a9ebc9" />
-              <rect x="215" y="211" width="136" height="136" rx="18" fill="#c7f6da" />
-              <rect x="236" y="232" width="38" height="38" rx="5" fill="#102b3b" />
-              <rect x="244" y="240" width="22" height="22" rx="2" fill="#c7f6da" />
-              <rect x="291" y="232" width="38" height="38" rx="5" fill="#102b3b" />
-              <rect x="299" y="240" width="22" height="22" rx="2" fill="#c7f6da" />
-              <rect x="236" y="287" width="38" height="38" rx="5" fill="#102b3b" />
-              <rect x="244" y="295" width="22" height="22" rx="2" fill="#c7f6da" />
-              <path d="M294 292h13v13h-13zm22 0h13v13h-13zm-22 22h13v13h-13zm22 0h13v13h-13z" fill="#102b3b" />
-            </svg>
-            <div className="absolute -bottom-8 -right-16 h-40 w-40 rounded-full bg-[#59c99c]/15 blur-[80px]" />
+          <div
+            id="calculator"
+            className="hero-art relative z-10 w-full rounded-[28px] border border-white/15 bg-[#0b2432]/95 p-5 shadow-[0_20px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-7"
+          >
+            <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1b5042] text-[10px] font-bold text-[#a9ebc9]">
+                  01
+                </span>
+                <span className="text-[11px] font-extrabold tracking-[0.16em] uppercase text-[#a9ebc9]">
+                  CHECK THE CHARGE
+                </span>
+              </div>
+              <span className="rounded-md bg-white/10 px-2 py-0.5 font-mono text-[10px] text-[#93c1b6]">
+                {selectedCategory?.code || "P2M"}
+              </span>
+            </div>
+
+            <div className="mt-5 grid gap-4 sm:grid-cols-[1fr_175px]">
+              <div>
+                <label htmlFor="estimate-amount" className="block text-[10px] font-bold uppercase tracking-[0.12em] text-[#94b0a8]">
+                  Purchase amount
+                </label>
+                <div className="mt-1.5 flex items-baseline border-b-2 border-white/20 pb-1.5 transition-colors focus-within:border-[#a9ebc9]">
+                  <span className="text-2xl font-medium text-[#7fa397]">₹</span>
+                  <input
+                    id="estimate-amount"
+                    type="text"
+                    inputMode="decimal"
+                    value={amount}
+                    onChange={(event) => setAmount(event.target.value)}
+                    maxLength={18}
+                    placeholder="10000"
+                    className="w-full min-w-0 bg-transparent px-2 text-3xl font-semibold tracking-tight tabular-nums text-white outline-none placeholder:text-white/30"
+                  />
+                </div>
+                {amount && !totalPaise && (
+                  <p className="mt-1 text-xs text-[#f68f7b]">Enter a valid amount in rupees.</p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="estimate-date" className="block text-[10px] font-bold uppercase tracking-[0.12em] text-[#94b0a8]">
+                  Estimate date
+                </label>
+                <div className="mt-1.5 flex items-center gap-2 border-b-2 border-white/20 pb-2 text-[#9bb0aa] focus-within:border-[#a9ebc9]">
+                  <CalendarDays size={16} className="shrink-0 text-[#a9ebc9]" />
+                  <input
+                    id="estimate-date"
+                    type="date"
+                    value={paymentDate}
+                    onChange={(event) =>
+                      setPaymentDate(event.target.value || MDR_EFFECTIVE_DATE)
+                    }
+                    className="date-input w-full min-w-0 bg-transparent text-xs font-semibold text-white outline-none [color-scheme:dark]"
+                  />
+                </div>
+                <p className="mt-1 text-[10px] text-[#78938c]">
+                  Poster starts 15 Oct 2026.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-5">
+              <div className="mb-2 flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#94b0a8]">
+                  Actual payment category
+                </span>
+                <span className="text-[10px] text-[#7e9992]">Choose real sale type</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {PAYMENT_CATEGORIES.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    aria-pressed={category === item.id}
+                    onClick={() => {
+                      setCategory(item.id);
+                      setProviderConfirmed(false);
+                    }}
+                    title={item.description}
+                    className={cn(
+                      "group relative flex flex-col justify-between rounded-xl border p-2.5 text-left transition-all duration-150",
+                      category === item.id
+                        ? "border-[#59c99c] bg-[#16473b]/70 shadow-[0_0_15px_rgba(89,201,156,0.15)] ring-1 ring-[#59c99c]"
+                        : "border-white/10 bg-white/5 hover:border-white/25 hover:bg-white/10"
+                    )}
+                  >
+                    <div className="flex items-center justify-between gap-1 w-full">
+                      <span
+                        className={cn(
+                          "rounded px-1.5 py-0.5 font-mono text-[9px] font-bold tracking-wider",
+                          category === item.id ? "bg-[#59c99c] text-[#0b2432]" : "bg-white/10 text-[#a0b8b2]"
+                        )}
+                      >
+                        {item.code}
+                      </span>
+                    </div>
+                    <span className="mt-1.5 block text-xs font-semibold leading-tight text-white">
+                      {item.name}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {isSpecialCategory && (
+              <label className="mt-3.5 flex cursor-pointer items-start gap-2.5 rounded-xl border border-[#d5c67d]/30 bg-[#2b3525]/60 p-2.5 text-xs text-[#e4dbb2]">
+                <input
+                  type="checkbox"
+                  checked={providerConfirmed}
+                  onChange={(event) => setProviderConfirmed(event.target.checked)}
+                  className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-[#59c99c]"
+                />
+                <span className="text-[11px] leading-4">
+                  <strong className="text-white">Bank/PSP confirmed this classification.</strong> Without confirmation, standard P2M applies.
+                </span>
+              </label>
+            )}
+
+            {category === "p2p" && (
+              <p className="mt-3 text-[11px] leading-4 text-[#8ea49d]">
+                P2P applies only to personal transfers. Sale proceeds to a personal UPI ID remain merchant transactions under guidelines.
+              </p>
+            )}
+
+            <div className="mt-5 rounded-2xl border border-white/10 bg-[#071822] p-4 text-white">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#93c1b6]">
+                    Estimated Merchant MDR
+                  </span>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-extrabold tracking-tight tabular-nums text-[#a9ebc9]">
+                      {formatPaise(estimate.feePaise)}
+                    </span>
+                    <span className="text-xs text-[#8aa69e]">
+                      {estimate.feePaise === 0 ? "(Zero Fee)" : `(${selectedCategory?.code || "MDR"})`}
+                    </span>
+                  </div>
+                </div>
+                <a
+                  href="#collect"
+                  className="mt-1 inline-flex items-center gap-1.5 rounded-lg bg-[#59c99c] px-3 py-2 text-xs font-bold text-[#0b2432] transition hover:bg-[#a9ebc9]"
+                >
+                  Collect <ArrowRight size={13} />
+                </a>
+              </div>
+
+              <p className="mt-2 text-xs leading-5 text-[#88a9a4]">
+                {estimate.basis}
+              </p>
+
+              {estimate.awaitingConfirmation && estimate.feePaise > 0 && !estimate.beforeEffectiveDate && (
+                <div className="mt-2.5 flex items-start gap-1.5 text-[11px] leading-4 text-[#e0cf85]">
+                  <Info size={14} className="mt-0.5 shrink-0" />
+                  Special rate pending provider classification confirmation.
+                </div>
+              )}
+
+              <div className="mt-3.5 grid grid-cols-2 gap-3 border-t border-white/10 pt-3 text-xs">
+                <div>
+                  <span className="text-[11px] text-[#7e9992]">Customer Pays</span>
+                  <div className="font-semibold tabular-nums text-white">
+                    {formatPaise(totalPaise)}
+                  </div>
+                </div>
+                <div>
+                  <span className="text-[11px] text-[#7e9992]">Net to Merchant</span>
+                  <div className="font-semibold tabular-nums text-[#a9ebc9]">
+                    {formatPaise(Math.max(0, totalPaise - estimate.feePaise))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -230,179 +405,6 @@ export default function App() {
             </p>
           </div>
         </div>
-
-        <section id="calculator" className="no-print mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
-          <div className="max-w-2xl">
-            <div className="section-index">01 / CHECK THE CHARGE</div>
-            <h2 className="section-heading mt-4">What does this payment cost?</h2>
-            <p className="section-copy mt-4">
-              Choose the type of payment it actually is. The estimate is for one
-              purchase at its full amount, not a fee prediction from a stack of QRs.
-            </p>
-          </div>
-
-          <div className="mt-9 grid items-start gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,.8fr)]">
-            <div className="rounded-[26px] border border-[#dce6df] bg-white p-5 shadow-[0_12px_40px_rgba(13,54,43,.035)] sm:p-8">
-              <div className="grid gap-6 sm:grid-cols-[1fr_205px]">
-                <div>
-                  <label htmlFor="estimate-amount" className="field-label">
-                    Purchase amount
-                  </label>
-                  <div className="flex items-baseline border-b-2 border-[#c8dbd0] transition-colors focus-within:border-[#128c70]">
-                    <span className="pb-2 text-2xl font-medium text-[#57736a]">₹</span>
-                    <input
-                      id="estimate-amount"
-                      type="text"
-                      inputMode="decimal"
-                      value={amount}
-                      onChange={(event) => setAmount(event.target.value)}
-                      maxLength={18}
-                      placeholder="10000"
-                      className="w-full min-w-0 bg-transparent px-2 pb-2 text-4xl font-semibold tracking-[-0.05em] tabular-nums text-[#173243] outline-none placeholder:text-[#bdcbc2]"
-                    />
-                  </div>
-                  {amount && !totalPaise && (
-                    <p className="mt-1.5 text-xs text-[#ad523b]">Enter a valid amount in rupees.</p>
-                  )}
-                </div>
-                <div>
-                  <label htmlFor="estimate-date" className="field-label">
-                    Date for estimate
-                  </label>
-                  <div className="flex items-center gap-2 border-b-2 border-[#c8dbd0] py-2.5 text-[#67817b] focus-within:border-[#128c70]">
-                    <CalendarDays size={17} className="shrink-0" />
-                    <input
-                      id="estimate-date"
-                      type="date"
-                      value={paymentDate}
-                      onChange={(event) =>
-                        setPaymentDate(event.target.value || MDR_EFFECTIVE_DATE)
-                      }
-                      className="date-input min-w-0 w-full bg-transparent text-sm font-semibold text-[#173243] outline-none"
-                    />
-                  </div>
-                  <p className="mt-1.5 text-[11px] text-[#879791]">
-                    Poster rate starts 15 Oct 2026.
-                  </p>
-                </div>
-              </div>
-
-              <fieldset className="mt-9">
-                <legend className="field-label mb-4">Actual payment type</legend>
-                <div className="grid gap-2 sm:grid-cols-2">
-                  {PAYMENT_CATEGORIES.map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      aria-pressed={category === item.id}
-                      onClick={() => {
-                        setCategory(item.id);
-                        setProviderConfirmed(false);
-                      }}
-                      className={cn(
-                        "category-choice group flex min-h-[90px] items-start gap-3 rounded-2xl border p-3.5 text-left transition-all duration-200",
-                        category === item.id
-                          ? "border-[#238c70] bg-[#eaf6ef] shadow-[0_4px_16px_rgba(12,113,83,.08)]"
-                          : "border-[#e2eae4] bg-white hover:border-[#accdbb] hover:bg-[#fafcf9]",
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          "mt-0.5 inline-flex min-w-[53px] justify-center rounded-md px-1.5 py-1 text-[10px] font-bold tracking-[0.06em]",
-                          category === item.id
-                            ? "bg-[#c6e8d3] text-[#06684f]"
-                            : "bg-[#edf2ee] text-[#597069]",
-                        )}
-                      >
-                        {item.code}
-                      </span>
-                      <span className="min-w-0">
-                        <span className="block text-[13px] font-bold leading-5 text-[#1a3440]">
-                          {item.name}
-                        </span>
-                        <span className="mt-0.5 block text-xs leading-5 text-[#70827d]">
-                          {item.description}
-                        </span>
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </fieldset>
-
-              {isSpecialCategory && (
-                <label className="mt-6 flex cursor-pointer items-start gap-3 border-t border-[#e7eee8] pt-5">
-                  <input
-                    type="checkbox"
-                    checked={providerConfirmed}
-                    onChange={(event) => setProviderConfirmed(event.target.checked)}
-                    className="mt-0.5 h-4 w-4 shrink-0 accent-[#087b68]"
-                  />
-                  <span>
-                    <span className="block text-[13px] font-semibold text-[#1d3946]">
-                      My bank or PSP confirms this classification
-                    </span>
-                    <span className="mt-0.5 block text-xs leading-5 text-[#71837e]">
-                      If not confirmed, the estimate uses the standard P2M rate. A
-                      selection here cannot change the category of a real payment.
-                    </span>
-                  </span>
-                </label>
-              )}
-
-              {category === "p2p" && (
-                <p className="mt-5 border-t border-[#e7eee8] pt-4 text-xs leading-5 text-[#71837e]">
-                  P2P means a personal transfer. Money received for goods or services
-                  is a merchant payment, even when sent to a personal-looking UPI ID.
-                </p>
-              )}
-            </div>
-
-            <div className="result-panel flex min-h-[440px] flex-col rounded-[26px] bg-[#123545] p-6 text-white sm:p-8">
-              <div className="flex items-center justify-between gap-4">
-                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#a9d8cc]">
-                  Estimated merchant MDR
-                </span>
-                <span className="font-mono text-[11px] text-[#80adab]">
-                  {selectedCategory?.code}
-                </span>
-              </div>
-              <div aria-live="polite" className="result-number mt-8 text-[clamp(48px,5vw,72px)] font-semibold leading-none tracking-[-0.075em] tabular-nums text-white">
-                {formatPaise(estimate.feePaise)}
-              </div>
-              <p className="mt-4 min-h-[48px] max-w-sm text-sm leading-6 text-[#afced0]">
-                {estimate.basis}
-              </p>
-
-              {estimate.awaitingConfirmation && estimate.feePaise > 0 && !estimate.beforeEffectiveDate && (
-                <div className="mt-5 flex items-start gap-2 border-l-2 border-[#d5c67d] pl-3 text-xs leading-5 text-[#e4dbb2]">
-                  <Info size={15} className="mt-0.5 shrink-0" />
-                  The special rate is not applied until you confirm your provider's classification.
-                </div>
-              )}
-
-              <div className="mt-auto pt-10">
-                <div className="border-t border-white/15 py-4 text-sm">
-                  <div className="flex justify-between gap-5">
-                    <span className="text-[#aac9ca]">Customer pays</span>
-                    <strong className="font-semibold tabular-nums text-white">
-                      {formatPaise(totalPaise)}
-                    </strong>
-                  </div>
-                  <div className="mt-3 flex justify-between gap-5">
-                    <span className="text-[#aac9ca]">After estimated MDR</span>
-                    <strong className="font-semibold tabular-nums text-[#a9ebc9]">
-                      {formatPaise(Math.max(0, totalPaise - estimate.feePaise))}
-                    </strong>
-                  </div>
-                </div>
-                <p className="border-t border-white/15 pt-4 text-xs leading-5 text-[#8eafb2]">
-                  Indicative only for bank-account UPI. Your acquirer's classification
-                  and settlement terms control the actual charge. MDR is not GST.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <ChargeGuide />
 
